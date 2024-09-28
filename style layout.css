@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    direction: rtl;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الهيدر */
+.header {
+    height: 50px;
+    background-color: #555;
+}
+
+/* الشريط العلوي مع السهم */
+.top-bar-with-arrow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
+    gap: 8px;
+    flex: auto;
+}
+
+.tab {
+    background-color: #777;
+    height: 20px;
+    flex: 1;
+}
+
+/* السهم */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* عرض السهم من اليسار */
+    border-right: 15px solid transparent; /* عرض السهم من اليمين */
+    border-top: 15px solid #d3d3d3; /* لون السهم (سكني فاتح) */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* تدوير السهم ليصبح بالعرض */
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    display: flex;
+    gap: 10px;
+}
+
+.large-box {
+    background-color: #666;
+    flex: 2;
+    height: 200px;
+}
+
+.side-box {
+    background-color: #888;
+    flex: 1;
+    height: 200px;
+}
+
+/* الشبكة السفلية */
+.bottom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #ccc;
+    width: calc(25% - 10px);
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-rect {
+    width: 60%;
+    height: 10px;
+    background-color: #aaa;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* المستطيلات الصغيرة بالطول */
+.long-rect {
+    width: calc(33.33% - 10px);
+    height: 150px;
+}
+
+.long-rect-item {
+    background-color: #aaa;
+    width: 90%;
+    height: 90%;
+}
+
+/* قسم النصوص الجانبية */
+.text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 100px;
+}
+
+.text-header {
+    background-color: #999;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.text-content {
+    background-color: #ddd;
+    height: 60px;
+}
